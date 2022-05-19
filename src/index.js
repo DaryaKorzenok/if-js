@@ -1,19 +1,16 @@
-{
-  let user = 'John Doe';
-  console.log(user);
-  const student = 'Darya';
-  console.log(student);
-  user = student; // user = 'Darya';
-  console.log(user);
-}
-{
-  let test = 1;
-  test += 1;
-  test += '1'; // test = '21'
-  console.log(test);
-  test = Boolean(test); // true
-  console.log(test);
-}
+let user = 'John Doe';
+console.log(user);
+const student = 'Darya';
+console.log(student);
+user = student; // user = 'Darya';
+console.log(user);
+
+let test = 1;
+test += 1;
+test += '1'; // test = '21'
+console.log(test);
+test = Boolean(test); // true
+console.log(test);
 {
   let result = 1;
   const arr = [2, 3, 5, 8];
