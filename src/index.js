@@ -32,3 +32,38 @@ for (let i = 0; i < arrTask3.length; i += 1) {
     console.log('Even element:', arrTask3[i]);
   }
 }
+//palindrome
+const palindrome = (string) => string === string.split('').reverse('').join('');
+console.log(palindrome('hello'));
+console.log(palindrome('noon'));
+
+//find min
+function min(a, b) {
+  if (a < b) {
+    return a;
+  }
+  return b;
+}
+console.log(min(4, 5));
+
+//find min ternary function
+const minSecond = (a, b) => (a < b ? a : b);
+console.log(minSecond(0, 10));
+
+//find max
+function max(a, y) {
+  if (a > y) {
+    return a;
+  }
+  return y;
+}
+console.log(max(4, 5));
+
+//find max ternary function
+const maxSecond = (a, y) => (a > y ? a : y);
+console.log(maxSecond(0, 10));
+
+//replacing 0 with zero
+const arrayWithZero = [1, 10, 24, 32, 90, 39, 11, 75, 100, 89];
+const replaceZero = () => String(arrayWithZero).replaceAll('0', 'zero');
+console.log(replaceZero(arrayWithZero));
