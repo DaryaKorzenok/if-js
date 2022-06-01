@@ -81,3 +81,19 @@ function sum(numberOne) {
 console.log(sum(5)(2));
 
 // task2
+const arrayColors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+function func() {
+  let color = 0;
+  return function () {
+    this.style.color = arrayColors[color];
+    color += 1;
+
+    if (color === arrayColors.length) {
+      color = 0;
+    }
+  };
+}
+const paragraph = document.getElementsByTagName('p');
+for (let i = 0; i < paragraph.length; i += 1) {
+  paragraph[i].addEventListener('click', func());
+}
