@@ -1,3 +1,4 @@
+// lesson 2
 let user = 'John Doe';
 console.log(user);
 const student = 'Darya';
@@ -32,12 +33,13 @@ for (let i = 0; i < arrTask3.length; i += 1) {
     console.log('Even element:', arrTask3[i]);
   }
 }
-//palindrome
+// lesson 3
+// palindrome
 const palindrome = (string) => string === string.split('').reverse('').join('');
 console.log(palindrome('hello'));
 console.log(palindrome('noon'));
 
-//find min
+// find min
 function min(a, b) {
   if (a < b) {
     return a;
@@ -46,11 +48,11 @@ function min(a, b) {
 }
 console.log(min(4, 5));
 
-//find min ternary function
+// find min ternary function
 const minSecond = (a, b) => (a < b ? a : b);
 console.log(minSecond(0, 10));
 
-//find max
+// find max
 function max(a, y) {
   if (a > y) {
     return a;
@@ -59,11 +61,39 @@ function max(a, y) {
 }
 console.log(max(4, 5));
 
-//find max ternary function
+// find max ternary function
 const maxSecond = (a, y) => (a > y ? a : y);
 console.log(maxSecond(0, 10));
 
-//replacing 0 with zero
+// replacing 0 with zero
 const arrayWithZero = [1, 10, 24, 32, 90, 39, 11, 75, 100, 89];
 const replaceZero = () => String(arrayWithZero).replaceAll('0', 'zero');
 console.log(replaceZero(arrayWithZero));
+
+// lesson4
+// task1
+
+function sum(numberOne) {
+  return function (numberTwo) {
+    return numberOne + numberTwo;
+  };
+}
+console.log(sum(5)(2));
+
+// task2
+const arrayColors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+function func() {
+  let color = 0;
+  return function () {
+    this.style.color = arrayColors[color];
+    color += 1;
+
+    if (color === arrayColors.length) {
+      color = 0;
+    }
+  };
+}
+const paragraph = document.getElementsByTagName('p');
+for (let i = 0; i < paragraph.length; i += 1) {
+  paragraph[i].addEventListener('click', func());
+}
